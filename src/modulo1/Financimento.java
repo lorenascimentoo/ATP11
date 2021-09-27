@@ -19,6 +19,30 @@ public class Financimento {
             System.out.print("Insira a opcao desejada: ");
             opcao = Byte.parseByte(sc.nextLine());
 
+            switch(opcao){
+                case 1:
+                    System.out.println(); // utilizado apenas para melhorar a visualizacao na saida do terminal
+                    System.out.println("-- CREDITO PESSOAL");
+                    break;
+                case 2:
+                    System.out.println(); // utilizado apenas para melhorar a visualizacao na saida do terminal
+                    System.out.println("-- CREDITO IMOBILIARIO");
+                    break;
+                case 3:
+                    System.out.println(); // utilizado apenas para melhorar a visualizacao na saida do terminal
+                    System.out.println("-- CREDITO EMPRESARIAL");
+                    break;
+                case 4:
+                    System.out.println(); // utilizado apenas para melhorar a visualizacao na saida do terminal
+                    System.out.println("-- EMPRESTIMO CONSIGNADO");
+                    break;
+                default:
+                    System.out.println(); // utilizado apenas para melhorar a visualizacao na saida do terminal
+                    System.out.println(" ********** OPÇÃO INVÁLIDA!********");
+                    System.out.println(); // utilizado apenas para melhorar a visualizacao na saida do terminal
+                    break;
+            }
+
         }while(opcao<=0 || opcao>4);
 
         sc.close();
