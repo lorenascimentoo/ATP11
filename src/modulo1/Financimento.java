@@ -46,10 +46,14 @@ public class Financimento {
             char acao;
             if(opcao>0 && opcao<=4){
                 System.out.println("\t *** OPERAÇÃO REALIZADA COM SUCESSO! ***\n");
-                System.out.println("V - VOLTAR AO MENU PRINCIPAL | S - SAIR DO SISTEMA");
-                System.out.print("Insira a acao que deseja realizar agora: ");
-                acao = sc.nextLine().toUpperCase().charAt(0);
-                System.out.println(acao);
+                do{
+                    System.out.println("V - VOLTAR AO MENU PRINCIPAL | S - SAIR DO SISTEMA");
+                    System.out.print("Insira a acao que deseja realizar: ");
+                    acao = sc.nextLine().toUpperCase().charAt(0); // pega a string, transforma em maiusculo e depois atribui apenas o primeiro caracter a variavel    
+                    if(acao!='S' && acao!='V'){
+                        System.out.println("\n ** OPCAO INVALIDA!** \n");
+                    }
+                }while(acao!='S' && acao!='V');
             }
 
         }while(opcao<=0 || opcao>4);
