@@ -9,6 +9,7 @@ public class Financimento {
 
         Scanner sc = new Scanner(System.in);
         byte opcao;
+        char acao='V';
         do{
             System.out.println("\t--- OPÇÕES DE FINANCIAMENTOS ---");
             System.out.println("1 - CREDITO PESSOAL");
@@ -43,7 +44,7 @@ public class Financimento {
                     break;
             }
 
-            char acao;
+            
             if(opcao>0 && opcao<=4){
                 System.out.println("\t *** OPERAÇÃO REALIZADA COM SUCESSO! ***\n");
                 do{
@@ -56,8 +57,11 @@ public class Financimento {
                 }while(acao!='S' && acao!='V');
             }
 
-        }while(opcao<=0 || opcao>4);
+        }while(opcao<=0 || opcao>4 || acao=='V');
 
+        if(acao == 'S'){
+            System.out.println("\n \tOBRIGADO!\n");
+        }
         sc.close();
     }
 }
