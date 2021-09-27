@@ -43,6 +43,15 @@ public class Financimento {
                     break;
             }
 
+            char acao;
+            if(opcao>0 && opcao<=4){
+                System.out.println("\t *** OPERAÇÃO REALIZADA COM SUCESSO! ***\n");
+                System.out.println("V - VOLTAR AO MENU PRINCIPAL | S - SAIR DO SISTEMA");
+                System.out.print("Insira a acao que deseja realizar agora: ");
+                acao = sc.nextLine().toUpperCase().charAt(0);
+                System.out.println(acao);
+            }
+
         }while(opcao<=0 || opcao>4);
 
         sc.close();
